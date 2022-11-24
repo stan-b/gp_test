@@ -5,8 +5,8 @@ use warnings;
 use DBI;
 use Data::Dumper;
 
-
 my $html_data = '';
+
 # Connect to the database.
 my $dbh = DBI->connect("DBI:mysql:database=gazprom;host=localhost", "stan", "aqua32", { 'RaiseError' => 1 });
 
@@ -31,8 +31,7 @@ if (length($ENV{'QUERY_STRING'}) > 0) {
     $html_data .= qq[Всего результатов: $row_count, из них выведено $limit];
   }
 
-}
-else {
+} else {
   $html_data .= qq[
   <form action="" method="get">
   <label for="site-search">Введите email:</label>
