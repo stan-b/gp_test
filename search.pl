@@ -12,7 +12,7 @@ my $dbh = DBI->connect("DBI:mysql:database=gazprom;host=localhost", "stan", "aqu
 
 my $limit = 100;
 my $counter = 0;
-$ENV{'QUERY_STRING'} = 'query=ceftpqlvefv@mail.ru';
+#$ENV{'QUERY_STRING'} = 'query=ceftpqlvefv@mail.ru';
 if (length($ENV{'QUERY_STRING'}) > 0) {
   my ($search_query) = $ENV{'QUERY_STRING'} =~ /query=(.*)$/;
 
